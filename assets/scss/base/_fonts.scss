@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "SB Sans Display";
+  src: url("../../fonts/SB-Sans-Display/SB-Sans.woff2") format("woff2"),
+    url("../../fonts/SB-Sans-Display/SB-Sans.woff") format("woff"),
+    url("../../fonts/SB-Sans-Display/SB-Sans.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SB Sans Text";
+  src: url("../../fonts/SB-Sans-Text/Sans.woff2") format("woff2"),
+    url("../../fonts/SB-Sans-Text/Sans.woff") format("woff"),
+    url("../../fonts/SB-Sans-Text/Sans.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

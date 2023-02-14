@@ -1,0 +1,111 @@
+@use "sass:math";
+
+@import "./base/base";
+@import "./base/mixins";
+@import "./base/fonts";
+@import "./base/variables";
+
+/*------------------Section Start------------------*/
+@import "./preloader/preloader";
+/*------------------Section Start------------------*/
+
+/*------------------ОБОЛОЧКА------------------*/
+// оболочка wrapper
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: $backgroundMain;
+}
+
+// контейнер
+[class*="__container"] {
+  width: 100%;
+  max-width: rem(1338);
+  margin: 0 auto;
+  padding: 0 rem(15);
+}
+/*------------------ОБОЛОЧКА------------------*/
+
+/*------------------BEM------------------*/
+.title,
+.title__cards {
+  font-family: $fontTitle;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.title {
+  font-size: clamp(rem(32), 3.33vw, rem(48));
+  line-height: clamp(rem(36), 3.61vw, rem(52));
+  text-align: center;
+  color: $colorTitle;
+}
+
+.subtitle {
+  font-family: $fontText;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(rem(18), 2.5vw, rem(24));
+  line-height: clamp(rem(26), 2.22vw, rem(32));
+  letter-spacing: -0.019em;
+  color: $colorSubtitle;
+}
+
+.title__cards {
+  font-size: clamp(rem(24), 2.22vw, rem(32));
+  line-height: clamp(rem(30), 2.5vw, rem(36));
+  color: $colorMain;
+}
+
+.btn {
+  background: $backgroundBtn;
+  border-radius: rem(100);
+  -webkit-border-radius: rem(100);
+  -moz-border-radius: rem(100);
+  -ms-border-radius: rem(100);
+  -o-border-radius: rem(100);
+  font-family: $fontText;
+  font-style: normal;
+  font-weight: 600;
+  font-size: rem(16);
+  line-height: rem(20);
+  letter-spacing: -0.018em;
+  color: $colorTitle;
+  align-self: flex-start;
+  padding: rem(18) rem(26);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+/*------------------BEM------------------*/
+
+/*------------------MAIN------------------*/
+.main {
+  flex: 1 1 auto;
+}
+/*------------------MAIN------------------*/
+
+/*------------------Section Start------------------*/
+@import "./sectionStart/sectionStart";
+/*------------------Section Start------------------*/
+
+/*------------------sectionEarnings------------------*/
+@import "./sectionEarnings/sectionEarnings";
+/*------------------sectionEarnings------------------*/
+
+/*------------------sectionGrowth------------------*/
+@import "./sectionGrowth/sectionGrowth";
+/*------------------sectionGrowth------------------*/
+
+/*------------------sectionGrowth------------------*/
+@import "./animation/animation";
+/*------------------sectionGrowth------------------*/

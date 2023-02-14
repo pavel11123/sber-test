@@ -1,0 +1,103 @@
+.section__earnings {
+  margin-top: rem(112);
+}
+
+.earnings__block-content {
+  margin-top: rem(56);
+  background: $backgroundBlue;
+  border-radius: rem(24);
+  -webkit-border-radius: rem(24);
+  -moz-border-radius: rem(24);
+  -ms-border-radius: rem(24);
+  -o-border-radius: rem(24);
+  padding: clamp(rem(32), 2.78vw, rem(40)) clamp(rem(24), 3.33vw, rem(48));
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(264), 1fr));
+  gap: rem(25);
+
+  @media (max-width: 630px) {
+    gap: rem(36);
+  }
+}
+
+.earnings__block-content--left {
+  gap: rem(24);
+  justify-content: space-between;
+}
+
+.earnings__block-description {
+  gap: rem(16);
+}
+
+.earnings__block-content--right {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    background-image: url("../img/rouble.svg");
+    top: rem(182);
+    left: rem(-20);
+    width: rem(78);
+    height: rem(64);
+  }
+
+  &::after {
+    background-image: url("../img/rouble.svg");
+    top: rem(53);
+    right: rem(-50);
+    width: rem(80);
+    height: rem(58);
+  }
+
+  @media (max-width: 630px) {
+    &::before {
+      top: auto;
+      bottom: rem(10);
+      left: adaptiv-num-rem(10, 30, 630, 375);
+      width: adaptiv-num-rem(48, 78, 630, 375);
+      height: rem(64);
+    }
+
+    &::after {
+      top: clamp(rem(32), 20.63vw, rem(130));
+      right: adaptiv-num-rem(10, 60, 630, 375);
+      width: adaptiv-num-rem(60, 80, 630, 375);
+      height: rem(58);
+    }
+  }
+
+  @media (max-width: 375px) {
+    &::before {
+      left: rem(10);
+      width: rem(48);
+    }
+
+    &::after {
+      right: rem(10);
+      width: rem(60);
+    }
+  }
+}
+
+.earnings__block-img {
+  padding: 0 0 60% 0;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+  }
+}
